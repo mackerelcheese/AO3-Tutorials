@@ -1,0 +1,62 @@
+body {
+    max-width:98%;
+    font-size:0.85em;
+  }
+  
+.f1-header {
+    display: flex;
+    background:	#FF1E00;
+    max-width:98%;
+    height:3em;
+    margin-left:auto;
+    margin-right:auto;
+}
+  
+.f1-racetitle {
+  font-size:1.5em;
+    margin-left:2%;
+    font-family: arial, sans-serif;
+}
+  
+.f1-raceimg {
+    height:5em; 
+}
+
+.f1-table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-style:hidden;
+    width: 98%;
+    margin-left:auto;
+    margin-right:auto;
+}
+  
+.f1-table td {
+    border: 0;
+    text-align: left;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:10px;
+    padding-right:10px;
+    width:auto;
+}
+  
+.f1-table th {
+    border: 0;
+    text-align: left;
+    font-size:0.75em;
+     padding-top:15px;
+    padding-bottom:15px;
+    padding-left:10px;
+    padding-right:10px;
+    font-weight: lighter;
+}
+  
+.f1-table tr:nth-child(even) {
+    background-color: #ECECEC;
+}
+  
+.f1-table tr td:first-child,
+  tr td:last-child, tr th:first-child, tr th:last-child {
+    text-align:center;
+}
