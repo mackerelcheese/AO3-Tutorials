@@ -1,0 +1,187 @@
+<style> 
+.figure{
+    margin-right:0;
+    margin-left:0;
+    max-width:100%
+}
+  
+.sp-container {
+    display: block;
+    background: black; 
+    max-width: 100%;
+    height: auto;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+  
+.sp-header {
+    display: flex; 
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+  
+/*change to picture*/
+.sp-pfp {
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+    background: #191414;
+    color: white;
+    margin: 4px;
+}
+  
+.sp-headerbutton {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 1.2em;
+    background: #191414;
+    color: white;
+    border-radius: 25px;
+    padding: 0.8em;
+    margin: 2px;
+    text-align: centre;
+    font-size: 0.875em;
+}
+  
+.sp-headerbutton:hover {
+    background: #1db954;
+    color: black;
+}
+  
+/*spotify top playlists*/
+.sp-playlistsrow {
+    display: flex;
+    max-width: 100%;
+    height:auto;
+}
+  
+.sp-playlistscontainer {
+    display: flex;
+    width: 250px;
+    height:50px;
+    padding:0;
+    margin: 5px;
+    background-color:#191414;
+    border-radius: 5px;
+}
+  
+.sp-playlistimg {
+    float: left;
+    max-height: 50px;
+    max-width: 50px;
+    border-radius:5px 0px 0px 5px;
+}
+  
+.sp-playlisttitle {
+   display: flex;
+   align-items: center;
+   color:white;
+   font-weight: bold;
+   padding: 1em;
+   font-size: 0.7em;
+}
+  
+/*fonts*/
+.sp-h1{
+    font-size: 1.5em;
+    color: white;
+    margin-left: 5px;
+    font-weight: bold;
+}
+  
+.sp-h2{
+    font-size: 0.9em;
+    color: white;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+  
+.sp-h3{
+    font-size: 0.7em;
+    color: #a2a2a2;
+    margin-left: 5px;
+    margin-top: 0px;
+}
+  
+.sp-albumscroll {
+    overflow-x: scroll;
+    display: flex;
+    height: auto;
+    width: auto;
+}
+  
+.sp-albums {
+   display: in-line;
+   height: auto;
+   width: auto;
+   padding: 3px;
+   flex-shrink: 0;
+}
+  
+/*change to actual image*/
+.sp-albumimg {
+    display: block;
+    width: 100px;
+    height:100px;
+}
+  
+/*new announcements*/
+.sp-newaannounce {
+    display: flex;
+    align-items:center;
+    width: 100%;
+    padding:5px;
+}
+
+.sp-newacontainer {
+    display: block;
+    padding:5px;
+}
+  
+.sp-newpfp {
+    float:left;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    background: #191414;
+    color: white;
+    margin: 2px;
+}
+  
+.sp-artisttitle {
+    font-size: 1.1em;
+    color: white;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+  
+.sp-newsong {
+    display: flex;
+    max-width: 90%;
+    align-items:center;
+    height: auto;
+    background:#191414;
+    border-radius:5px;
+    padding:15px;
+}
+  
+.sp-newsongimg {
+   display: block;
+    float: left;
+    width: 60px;
+    height:60px;
+}
+  
+.sp-play {
+    float: right;
+    margin-right: 0px;
+    border-radius:50%;
+    height: 3em;
+    width: 3em;
+}
+</style>
