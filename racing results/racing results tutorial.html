@@ -8,45 +8,144 @@
 </head>
 
 <body>
-    <div class="f1-header">
+  <figure class="figure">
+    <div class="wrap">
+      <div class="f1-header">
+          <div class="f1-headermenu-R">
+              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/race3line.png" alt="the menu button">
+          </div>
+          <div class="f1-headermenu-L">
+              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/racelogo.png" alt="the F1 logo">
+          </div> 
+      </div>
+      <p class ="f1-racetitle ">Dinoco 400 Piston Cup Racing Series - Race Result</p>
+      <img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/dinocologo.png" alt="the Dinoco logo from the Cars movie">
+      <table class="f1-table">
+        <tr>
+          <th style="width:5%">POS</th>
+          <th style="width:36.5%">DRIVER</th>
+          <th style="width:15%">NATIONALITY</th>
+          <th style="width:36.5%">CAR</th>
+          <th style="width:5%">PTS</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Remus Lupin</td>
+          <td>NED</td>
+          <td>Black-Hill</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sirius Black</td>
+          <td>FRA</td>
+          <td>Black-Hill</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>James Potter</td>
+          <td>ESP</td>
+          <td>Andretti Racing</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Regulus Black</td>
+          <td>FRA</td>
+          <td>Andretti Racing</td>
+          <td>12</td>
+        </tr>
+      </table>
     </div>
-    <p class ="f1-racetitle ">Dinoco 400 Piston Cup Racing Series - Race Result</p>
-    <img class = "f1-raceimg" src = "https://banner2.cleanpng.com/20180613/oos/aa7jji8lr.webp">
-    <table class="f1-table">
-      <tr>
-        <th style="width:5%">POS</th>
-        <th style="width:36.5%">DRIVER</th>
-        <th style="width:15%">NATIONALITY</th>
-        <th style="width:36.5%">CAR</th>
-        <th style="width:5%">PTS</th>
-      </tr>
-      <tr>
-        <td><strong>1</strong></td>
-        <td><strong>Sirius Black</strong></td>
-        <td><strong>FRA</strong></td>
-        <td>Black-Hill</td>
-        <td><strong>243</strong></td>
-      </tr>
-      <tr>
-        <td><strong>2</strong></td>
-        <td><strong>Remus Lupin</strong></td>
-        <td><strong>NED</strong></td>
-        <td>Black-Hill</td>
-        <td><strong>233</strong></td>
-      </tr>
-      <tr>
-        <td><strong>3</strong></td>
-        <td><strong>James Potter</strong></td>
-        <td><strong>ESP</strong></td>
-        <td>Andretti Racing</td>
-        <td><strong>210</strong></td>
-      </tr>
-      <tr>
-        <td><strong>4</strong></td>
-        <td><strong>Regulus Black</strong></td>
-        <td><strong>FRA</strong></td>
-        <td>Andretti Racing</td>
-        <td><strong>205</strong></td>
-      </tr>
-    </table>
+  
+      <p>I decided to make an HTML skin of the F1 race results based on the ones that that <a href="https://archiveofourown.org/users/Badhairred/pseuds/Badhairred">Badhairred</a> put at the end of the race chapters in <a href="https://archiveofourown.org/works/54682633/chapters/138581038">Godlight.</a> The above table is based on the results from Chapter 1 and other things that just made me laugh. </p>
+  
+      <p>All the HTML and CSS can be found in chapters 2 and 3 of this work. </p>
+      
+      <h2>Pros and Cons </h2>
+      
+      <p>Now before you decide to put this in your fic, here are some of the pros and cons of doing something like this to your fanfics: </p>
+      
+      <h3>Pros: </h3>
+        <ul> 
+          <li>It is more screen reader-friendly compared to static images. The only alt-text I needed to add was for the F1 logo and Dinoco logo. </li>
+          <li>It is desktop and mobile reader friendly (although I did prioritise mobile readers,,, im sorry desktop readers,,,) </li>
+          <li>I am distracted by shiny things that make me go wow and will be your #1 fan</li>
+        </ul>
+      <h3>Cons: </h3>
+        <ul>
+          <li>You will have to recode sections if you want to use this in your existing fanfic (it's fun tho i promise) </li>
+          <li>It is not download-friendly - i.e. if you or your reader downloads this as an EPUB or PDF, it will look funky in not a cool way. You can follow this guide to hack your EPUBs but I have not tested it myself <s>yet.</s> <a href="https://archiveofourown.org/users/jihnari/pseuds/html_hell">html_hell</a> has a tutorial on <a href ="https://archiveofourown.org/works/60467425">how to make a custom EPUB if your HTML fic</a> if that's something you're interested in.</li>
+          <li>Your readers must turn “creator style” on to view the whole effect</li>
+          <li>You can’t use the cool fonts F1 has because AO3 only allows basic web safe fonts :c (ao3 pls,,, let me import fonts from google fonts,,, it'll solve half my problems,,,)  </li>
+        </ul>
+      
+      <h2>Customizing the table columns and width: </h2>
+      
+      <p>Again, this code was made to mimic the race results from Badhairred's fic so some of it might not be what you want (unless you are Badhairred, which in that case this MAY be something you want lol hi). Here are small tiny things about customizing this skin: </p>
+      
+      <h3>Columns</h3>
+      <p>So for this section, I couldn't figure out how to change the width sizes in CSS to make it look not weird so the custom sizes were more of a HTML thing. Behold: </p>
+      
+      <h4>Relevant HTML bits (ps its the table header): </h4>
+      <code>
+        &#60;tr&#62; <br/> 
+        &#60;th style="width:5%"&#62;POS&#60;/th&#62; <br/>
+        &#60;th style="width:36.5%"&#62;DRIVER&#60;/th&#62; <br/>
+        &#60;th style="width:15%"&#62;NATIONALITY&#60;/th&#62; <br/>
+        &#60;th style="width:36.5%"&#62;CAR&#60;/th&#62; <br/>
+        &#60;th style="width:5%"&#62;PTS&#60;/th&#62;<br/>
+        &#60;/tr&#62; <br/>
+      </code>
+      
+      <p>It's a little ugly but it works and that’s all that matters to me :). So in the CSS for this section, I capped the table width to 98% because i didnt want weird margin thingies. If you want to add more columns or change the width, you have to make sure that the sum of the columns will be 98%. TLDR; SUM OF ALL COLUMNS WIDTHS (%) = 98% </p>
+      
+      <h3>The aesthetics of certain columns </h3>
+      
+      <p>You might have noticed that for columns 1, 2, 3, and 5 there is some bold stuff going on and that the first and last column has some centre alignment. So AGAIN this was made to mimic something else that had that stuff going on. I didn’t want to have to put <code>&#60;strong&#62;Racer Name&#60;/strong&#62;</code> every time i wanted to add in a new racer. </p>
+      
+      <p>If you want to customise that or remove it, here are the relevant bits in the CSS that you can do with what you please” </p>
+      
+      <h4>Relevant CSS bits: </h4>
+      <code>
+        <p>.f1-table tr td:first-child, tr td:last-child, tr th:first-child, tr th:last-child {<br/>
+        text-align:center;<br/>
+        }</p>
+  
+        <p>	.f1-table tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3), tr td:nth-child(5) {<br/>
+        font-weight: bold;<br/>
+        }	</p>
+      </code>
+  
+      <h5>Referenced and Helpful Resources: </h5>
+        <ol>
+          <li>The F1 logo taken from <a href=”https://companieslogo.com/formula-one-group/logo/”>companieslogo.com </a></li>
+          <li>The W3Schools <a href=”https://www.w3schools.com/html/html_tables.asp”>table tutorial</a></li>
+          <li>Dinoco logo from the Cars movie taken from <a href=”https://www.pngegg.com/en/png-bbpso>pngegg </a></li>
+        </ol>
+  
+      <h5>Note to self for potential future revisions: </h5>
+        <ul>
+          <li>Make an F1 mobile website accurate version - aka change the column stuff to make it easier for people to yoink, make one for all races by year etc. </li>
+          <li>The reason why i had to pick either mobile or desktop users was because of the header - mobile/desktop ones look sooooo different from each other. 
+            I have to look into making a header for desktop so that people can just slap it on if they want to. Or find a way to trigger between mobile and desktop views.  </li>
+          <li>Use detail/summary tags to make the header menu actually work OR look at gifbots tabbing experiment and make the tabs function like the real website u.u </li>
+          <li>Make my own F1/racing inspired fic one day?? Maybe?? I am tired. </li>
+        </ul>
+    </figure>
+<!--Beginning Notes-->
+<p>This work is part of the <a href="https://www.tumblr.com/html-tryhard">Tryhards Fanfic Event Week 2025.</a> 
+  Check out the <a href="https://archiveofourown.org/collections/HTML_Tryhards_2025">other works from this fest!</a></p> 
+<!--End Notes-->
+
+<p>me learning HTML because fanfic 🤝 me learning F1 because fanfic</p>
+<p>there are two wolves inside of me</p>
+<p>if you're a marauders fan or just like funky HTML Tryhard fics, i have a marauders HTML Tryhard fic that's inspired by the movie Everything 
+  Everywhere All At Once.</p> 
+<p>Also please go check out the other works from the <a href="https://archiveofourown.org/collections/HTML_Tryhards_2025"> HTML Tryhard 2025 Fest!</a> Everyone worked really hard and its very fun.</p>
+
+<p>Come say hi on <a href="https://www.tumblr.com/mackerel-cheese">tumblr</a>!</p>
+
+<p>- Mack 🏁🚗</p>
 </body>
