@@ -11,7 +11,7 @@
   
 .f1-header {
     display: flex;
-    background:	#FF1E00;
+    background:	#e10600;
     max-width:98%;
     padding:5px;
     height: 4em;
@@ -45,6 +45,8 @@
     font-size:1.5em;
     margin-left:2%;
     font-family: arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
 }
   
 .f1-racesponsor {

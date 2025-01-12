@@ -12,14 +12,14 @@
     <div class="wrap">
       <div class="f1-header">
           <div class="f1-headermenu-R">
-              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/race3line.png" alt="the menu button">
+              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/race3line.png" alt="the menu button">
           </div>
           <div class="f1-headermenu-L">
-              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/racelogo.png" alt="the F1 logo">
+              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/racelogo.png" alt="the F1 logo">
           </div> 
       </div>
       <p class ="f1-racetitle ">Dinoco 400 Piston Cup Racing Series - Race Result</p>
-      <img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/dinocologo.png" alt="the Dinoco logo from the Cars movie">
+      <img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/dinocologo.png" alt="the Dinoco logo from the Cars movie">
       <table class="f1-table">
         <tr>
           <th style="width:5%">POS</th>
@@ -128,14 +128,15 @@
       <p>I used the actual <a href="https://www.formula1.com/en/results/2024/races/1252/abu-dhabi/race-result">F1 mobile website</a> as a reference for this workskin. You should be fine copying the images I added to this CSS for the header section aka the menu button and the F1 logo.</p>
       <p>The Dinaco section is supposed to be the race sponsor (or what I assume is the race sponsor, I'm a fake fan) and was stylised to be like the <a href="https://www.formula1.com/en/results/2024/races/1232/japan/race-result">F1 mobile site</a> as per the image below:</p>
 
-      <img src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/screenshot-f1.jpg" style="height: 20em;"> 
+      <img src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/screenshot-f1.jpg" style="height: 20em;"> 
 
       <p>The relavent line of HTML code are as follows:</p>
       <code>
-        &#60;img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/dinocologo.png" alt="the Dinoco logo from the Cars movie"&#62;
+        &#60;img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/dinocologo.png" alt="the Dinoco logo from the Cars movie"&#62;
       </code>
       
-      <p>That being said, feel free to remove it if you don't lie it or replace the link with your own.</p>
+      <p>To change the image, just input your own link in the SRC section. To remove the image, just remove the above line from the HTML. </p>
+      
       <h2>The CSS</h2>
       <details>
         <summary>
@@ -150,7 +151,7 @@
           
         .f1-header {
             display: flex;
-            background:	#FF1E00;
+            background:	#e10600;
             max-width:98%;
             padding:5px;
             height: 4em;
@@ -181,9 +182,11 @@
         }
         
         .f1-racetitle {
-            font-size:1.5em;
-            margin-left:2%;
-            font-family: arial, sans-serif;
+          font-size:1.5em;
+          margin-left:2%;
+          font-family: arial, sans-serif;
+          text-transform: uppercase;
+          font-weight: bold;
         }
           
         .f1-racesponsor {
@@ -236,6 +239,7 @@
         .f1-table tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3), tr td:nth-child(5) {
             font-weight: bold;
         }
+        
         </pre>
       </details>
 
@@ -248,11 +252,11 @@
           <strong>&#60;!--Menu Header--&#62;</strong> 
             &#60;div class="f1-header"&#62; 
               &#60;div class="f1-headermenu-R"&#62; 
-                &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/race3line.png" alt="the
+                &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/race3line.png" alt="the
   menu button"&#62; 
               &#60;/div&#62; 
               &#60;div class="f1-headermenu-L"&#62; 
-                &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/racelogo.png" alt="the F1 logo"&#62; 
+                &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/racelogo.png" alt="the F1 logo"&#62; 
               &#60;/div&#62;
             &#60;/div&#62; 
           
@@ -260,7 +264,7 @@
             &#60;p class ="f1-racetitle "&#62;Dinoco 400 Piston Cup Racing Series - Race Result&#60;/p&#62; 
           
           <strong>&#60;!--Race Sponsor image--&#62;</strong>  
-            &#60;img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/dinocologo.png"
+            &#60;img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/dinocologo.png"
   alt="the Dinoco logo from the Cars movie"&#62; 
   
           <strong>&#60;!--Race Results table--&#62;</strong>
@@ -305,8 +309,6 @@
         </pre>
       </details>
      
-
-      <p>To change the image, just input your own link in the SRC section. To remove the image, just remove this above line from the HTML. </p>
       <h5>Referenced and Helpful Resources: </h5>
         <ol>
           <li><a href="https://archiveofourown.org/admin_posts/1370">A Step-By-Step Guide to Work Skins</a> by AO3 Admins</li>
