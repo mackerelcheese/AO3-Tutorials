@@ -1,4 +1,4 @@
-.figure {
+figure {
     margin-left: 0px;
     margin-right:0px;
 }
@@ -10,18 +10,33 @@
   
 .f1-header {
     display: flex;
-    background:	#FF1E00;
+    background:	#e10600;
     max-width:98%;
     padding:5px;
     height: 4em;
     margin-left:auto;
     margin-right:auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .f1-headerimg {
     display:block;
     height:2.5em;
     width:auto;
+}
+
+.f1-signup {
+    display:block;
+    background:black;
+    height:2em;
+    padding:8px;
+    border-radius: 5px;
+    margin-right:5px;
+}
+
+.f1-signup-pfp {
+    height:2em;
 }
 
 .f1-headermenu-R {
@@ -44,6 +59,7 @@
     font-size:1.5em;
     margin-left:2%;
     font-family: arial, sans-serif;
+    font-weight:500;
 }
   
 .f1-racesponsor {
