@@ -2,6 +2,7 @@ figure {
     margin-left: 0px;
     margin-right:0px;
 }
+
 .wrap {
     max-width:98%;
     margin-left: auto;
@@ -105,10 +106,15 @@ figure {
 }
   
 .f1-table tr td:first-child,
-  tr td:last-child, tr th:first-child, tr th:last-child {
+  tr td:last-child, 
+  tr th:first-child, 
+  tr th:last-child {
     text-align:center;
 }
 
-.f1-table tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3), tr td:nth-child(5) {
+.f1-table tr td:nth-child(1), 
+tr td:nth-child(2), 
+tr td:nth-child(3), 
+tr td:nth-child(5) {
     font-weight: bold;
 }

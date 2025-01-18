@@ -10,6 +10,7 @@
 <body>
   <figure>
     <div class="wrap">
+      <!--F1 Header-->
       <div class="f1-header">
           <div class="f1-headermenu-R">
               <img class="f1-headerimg" src="race3line.png" alt="the menu button">
@@ -21,8 +22,11 @@
             <img class="f1-signup-pfp" src="user-pfp.png">
           </div>
       </div>
+      <!--Race Title-->
       <p class ="f1-racetitle">Dinoco 400 Piston Cup Racing Series - Race Result</p>
+      <!--Race Sponsor Image-->
       <img class = "f1-racesponsor" src = "dinocologo.png" alt="the Dinoco logo from the Cars movie">
+      <!--Race Results Table-->
       <table class="f1-table">
         <tr>
           <th style="width:5%">POS</th>
@@ -64,9 +68,10 @@
   
       <p>I decided to make an HTML skin of the F1 race results based on the ones that that <a href="https://archiveofourown.org/users/Badhairred/pseuds/Badhairred">Badhairred</a> put at the end of the race chapters in <a href="https://archiveofourown.org/works/54682633/chapters/138581038">Godlight.</a> The above table is based on the results from Chapter 1 and other things that just made me laugh. </p>
   
-      <p>All the HTML and CSS can be found in chapters 2 and 3 of this work. </p>
+      <p>All the HTML and CSS can be found in dropdown boxes near the end of this fic. </p>
       
       <p>If this is your first time using custom CSS in your AO3 works, I suggest reading this <a href="https://archiveofourown.org/admin_posts/1370">tutorial</a> on how to use custom workskins.</p>
+      <p>Since this is the first in a series of HTML guides/proof of concepts I planned out, I'm going to be a bit rambly here.</p>
 
       <h2>Pros and Cons </h2>
       
@@ -75,7 +80,7 @@
       <h3>Pros: </h3>
         <ul> 
           <li>It is more screen reader-friendly compared to static images. The only alt-text I needed to add was for the F1 logo and Dinoco logo. </li>
-          <li>It is desktop and mobile reader friendly (although I did prioritise mobile readers,,, im sorry desktop readers,,,) </li>
+          <li>It is desktop and mobile reader friendly (although I did prioritise mobile readers,,, im sorry desktop readers,,, there are ways around it though and i will probably revisit it when work is less stressful) </li>
           <li>I am distracted by shiny things that make me go wow and will be your #1 fan</li>
         </ul>
       <h3>Cons: </h3>
@@ -86,24 +91,26 @@
           <li>You can’t use the cool fonts F1 has because <a href="https://archiveofourown.org/faq/skins-and-archive-interface?language_id=en#cssproperties">AO3 only allows basic web safe fonts</a> :c (ao3 pls,,, let me import fonts from google fonts,,, it'll solve half my problems,,,)  </li>
         </ul>
       
-        
+      <h3>About the code:</h3>
       <p>Again, this code was made to mimic the race results from Badhairred's fic so some of it might not be what you want (unless you are Badhairred, which in that case this MAY be something you want lol hi). Here are small tiny things about customizing this skin: </p>
-      
+      <p>I added <code>f1-</code>in front of each class so you can use this without having it clash with other custom CSS you may be using (unless there's other CSS that also uses f1 whoops).</p>
+      <p>The output is scalable to different screen sizes since I used % instead of px. </p>
+     
       <h2>Customizing the table columns and width: </h2>
       
       <h3>Columns</h3>
       <p>So for this section, I couldn't figure out how to change the width sizes in CSS to make it look not weird so the custom sizes were more of a HTML thing. Behold: </p>
       
       <h4>Relevant HTML bits (ps its the table header): </h4>
-      <code>
-        &#60;tr&#62; <br/> 
-        &#60;th style="width:5%"&#62;POS&#60;/th&#62; <br/>
-        &#60;th style="width:36.5%"&#62;DRIVER&#60;/th&#62; <br/>
-        &#60;th style="width:15%"&#62;NATIONALITY&#60;/th&#62; <br/>
-        &#60;th style="width:36.5%"&#62;CAR&#60;/th&#62; <br/>
-        &#60;th style="width:5%"&#62;PTS&#60;/th&#62;<br/>
+      <pre>
+        &#60;tr&#62; 
+          &#60;th style="width:5%"&#62;POS&#60;/th&#62;         
+          &#60;th style="width:36.5%"&#62;DRIVER&#60;/th&#62;
+          &#60;th style="width:15%"&#62;NATIONALITY&#60;/th&#62;
+          &#60;th style="width:36.5%"&#62;CAR&#60;/th&#62; 
+          &#60;th style="width:5%"&#62;PTS&#60;/th&#62;
         &#60;/tr&#62; <br/>
-      </code>
+      </pre>
       
       <p>It's a little ugly but it works and that’s all that matters to me :). So in the CSS for this section, I capped the table width to 98% because i didnt want weird margin thingies. If you want to add more columns or change the width, you have to make sure that the sum of the columns will be 98%. TLDR; SUM OF ALL COLUMNS WIDTHS (%) = 98% = GOOD.</p>
       
@@ -114,15 +121,21 @@
       <p>If you want to customise that or remove it, here are the relevant bits in the CSS that you can do with what you please” </p>
       
       <h4>Relevant CSS bits: </h4>
-      <code>
-        <p>.f1-table tr td:first-child, tr td:last-child, tr th:first-child, tr th:last-child {<br/>
-        text-align:center;<br/>
-        }</p>
+      <pre>
+.f1-table tr td:first-child,
+tr td:last-child, 
+tr th:first-child, 
+tr th:last-child {
+    text-align:center;
+}
   
-        <p>	.f1-table tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3), tr td:nth-child(5) {<br/>
-        font-weight: bold;<br/>
-        }	</p>
-      </code>
+.f1-table tr td:nth-child(1), 
+tr td:nth-child(2), 
+tr td:nth-child(3), 
+tr td:nth-child(5) {
+    font-weight: bold;
+}
+      </pre>
       
       <h2>Customizing the images:</h2>
 
@@ -131,15 +144,14 @@
 
       <img src="screenshot-f1.jpg" style="height: 20em;"> 
 
-      <p>The relavent line of HTML code are as follows:</p>
       <details>
         <summary>The relavent line of HTML code are as follows:</summary>
           <pre>
-            &#60;img class = "f1-racesponsor" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/dinocologo.png" alt="the Dinoco logo from the Cars movie"&#62;
+ &#60;img class = "f1-racesponsor" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing%20results/dinocologo.png" alt="the Dinoco logo from the Cars movie"&#62;
           </pre>        
       </details>
        
-      <p>To change the image, just input your own link in the SRC section. To remove the image, just remove this above line from the HTML.</p>
+      <p>To change the image, just input your own link in the SRC section. To remove the image, just remove the above line from the HTML.</p>
       <h2>The CSS</h2>
       <details>
         <summary>
@@ -160,12 +172,27 @@
             height: 4em;
             margin-left:auto;
             margin-right:auto;
+            justify-content: center;
+            align-items: center;
         }
         
         .f1-headerimg {
             display:block;
             height:2.5em;
             width:auto;
+        }
+        
+        .f1-signup {
+            display:block;
+            background:black;
+            height:2em;
+            padding:8px;
+            border-radius: 5px;
+            margin-right:5px;
+        }
+        
+        .f1-signup-pfp {
+            height:2em;
         }
         
         .f1-headermenu-R {
@@ -185,11 +212,10 @@
         }
         
         .f1-racetitle {
-          font-size:1.5em;
-          margin-left:2%;
-          font-family: arial, sans-serif;
-          text-transform: uppercase;
-          font-weight: bold;
+            font-size:1.5em;
+            margin-left:2%;
+            font-family: arial, sans-serif;
+            font-weight:500;
         }
           
         .f1-racesponsor {
@@ -235,11 +261,16 @@
         }
           
         .f1-table tr td:first-child,
-          tr td:last-child, tr th:first-child, tr th:last-child {
+          tr td:last-child, 
+          tr th:first-child, 
+          tr th:last-child {
             text-align:center;
         }
         
-        .f1-table tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3), tr td:nth-child(5) {
+        .f1-table tr td:nth-child(1), 
+        tr td:nth-child(2), 
+        tr td:nth-child(3), 
+        tr td:nth-child(5) {
             font-weight: bold;
         }
         
@@ -251,41 +282,38 @@
         <summary>The HTML code to copy paste to get the exact table as above </summary>
         <pre>
           &#60;div class="wrap"&#62; 
-  
-          <strong>&#60;!--Menu Header--&#62;</strong> 
+            &#60;!--F1 Header--&#62; 
             &#60;div class="f1-header"&#62; 
               &#60;div class="f1-headermenu-R"&#62; 
-                &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/race3line.png" alt="the
-  menu button"&#62; 
+                &#60;img class="f1-headerimg" src="race3line.png" alt="the menu button"&#62; 
               &#60;/div&#62; 
-              &#60;div class="f1-headermenu-L"&#62; 
-                &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/racelogo.png" alt="the F1 logo"&#62; 
-              &#60;/div&#62;
+              &#60;div class="f1-headermenu-L"&#62;
+                &#60;img class="f1-headerimg" src="racelogo.png" alt="the F1 logo"&#62; 
+              &#60;/div&#62; 
+              &#60;div class="f1-signup"&#62; 
+                &#60;img class="f1-signup-pfp" src="user-pfp.png"&#62; 
+              &#60;/div&#62; 
             &#60;/div&#62; 
-          
-          <strong>&#60;!--Race Name--&#62;</strong>
-            &#60;p class ="f1-racetitle "&#62;Dinoco 400 Piston Cup Racing Series - Race Result&#60;/p&#62; 
-          
-          <strong>&#60;!--Race Sponsor image--&#62;</strong>  
-            &#60;img class = "f1-racesponsor" src = "https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/dinocologo.png"
-  alt="the Dinoco logo from the Cars movie"&#62; 
-  
-          <strong>&#60;!--Race Results table--&#62;</strong>
-            &#60;table class="f1-table"&#62; 
-              &#60;tr&#62; 
+            &#60;!--Race Title--&#62; 
+            &#60;p class ="f1-racetitle"&#62;Dinoco 400 Piston Cup Racing Series - Race Result&#60;/p&#62; 
+            &#60;!--Race Sponsor Image--&#62; 
+            &#60;img class = "f1-racesponsor" src = "dinocologo.png" alt="the Dinoco logo from the Cars movie"&#62; 
+            &#60;!--Race Results Table--&#62; 
+            &#60;table class="f1-table"&#62;
+              &#60;tr&#62;
                 &#60;th style="width:5%"&#62;POS&#60;/th&#62; 
                 &#60;th style="width:36.5%"&#62;DRIVER&#60;/th&#62; 
                 &#60;th style="width:15%"&#62;NATIONALITY&#60;/th&#62; 
                 &#60;th style="width:36.5%"&#62;CAR&#60;/th&#62; 
-                &#60;th style="width:5%"&#62;PTS&#60;/th&#62; 
+                &#60;th style="width:5%"&#62;PTS&#60;/th&#62;
               &#60;/tr&#62; 
               &#60;tr&#62; 
                 &#60;td&#62;1&#60;/td&#62; 
                 &#60;td&#62;Remus Lupin&#60;/td&#62; 
                 &#60;td&#62;NED&#60;/td&#62; 
                 &#60;td&#62;Black-Hill&#60;/td&#62; 
-                &#60;td&#62;25&#60;/td&#62;
-              &#60;/tr&#62;
+                &#60;td&#62;25&#60;/td&#62; 
+              &#60;/tr&#62; 
               &#60;tr&#62; 
                 &#60;td&#62;2&#60;/td&#62; 
                 &#60;td&#62;Sirius Black&#60;/td&#62; 
@@ -306,8 +334,8 @@
                 &#60;td&#62;FRA&#60;/td&#62; 
                 &#60;td&#62;Andretti Racing&#60;/td&#62; 
                 &#60;td&#62;12&#60;/td&#62; 
-              &#60;/tr&#62; 
-            &#60;/table&#62; 
+              &#60;/tr&#62;
+           &#60;/table&#62; 
           &#60;/div&#62;
         </pre>
       </details>
@@ -327,6 +355,7 @@
           <li>Make an F1 mobile website accurate version - aka change the column stuff to make it easier for people to yoink, make one for all races by year etc. </li>
           <li>The reason why i had to pick either mobile or desktop users was because of the header - mobile/desktop ones look sooooo different from each other. 
             I have to look into making a header for desktop so that people can just slap it on if they want to. Or find a way to trigger between mobile and desktop views.  </li>
+          <li>Streamline a few more things in the header - spacing etc</li>
           <li>Use detail/summary tags to make the header menu actually work and make the tabs function like the real website u.u </li>
           <li>Make my own F1/racing inspired fic one day?? Maybe?? I am tired. </li>
         </ul>
