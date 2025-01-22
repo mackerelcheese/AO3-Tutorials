@@ -60,7 +60,7 @@ figure {
     font-size:1.5em;
     margin-left:2%;
     font-family: arial, sans-serif;
-    font-weight:500;
+    font-weight:bold;
 }
   
 .f1-racesponsor {
@@ -117,4 +117,10 @@ tr td:nth-child(2),
 tr td:nth-child(3), 
 tr td:nth-child(5) {
     font-weight: bold;
+}
+
+.tutorial-img {
+    width:300px;
+    margin-left: auto;
+    margin-right:auto;
 }

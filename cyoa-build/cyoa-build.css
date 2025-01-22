@@ -1,0 +1,54 @@
+.flex-con {
+    display:flex;
+    flex-direction: column;
+}
+
+.choices {
+    display:block;
+    width:300px;
+    border:1px solid green;
+}
+
+.styling {
+    list-style: none;
+    padding: 0px;
+}
+
+.round1 ~ .styling > .story {
+    order:1;
+}
+
+.story {
+    display: none;
+}
+
+figure:has(details.choice1[open]) 
+.story1{
+    display:block;
+}
+
+figure:has(details.choice2[open]) 
+.story2{
+    display:block;
+}
+
+figure:has(details.choice3[open]) 
+.story3{
+    display:block;
+}
+
+figure:has(details.choice4[open]) 
+.story4{
+    display:block;
+}
+
+figure:has(details.round1[open])
+    .story {    
+    order:1;
+} 
+
+figure:has(details.round2[open])
+    .story {    
+    order:2;
+} 
+

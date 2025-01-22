@@ -13,19 +13,19 @@
       <!--F1 Header-->
       <div class="f1-header">
           <div class="f1-headermenu-R">
-              <img class="f1-headerimg" src="race3line.png" alt="the menu button">
+              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/race3line.png" alt="the menu button">
           </div>
           <div class="f1-headermenu-L">
-              <img class="f1-headerimg" src="racelogo.png" alt="the F1 logo">
+              <img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/racelogo.png" alt="the F1 logo">
           </div> 
           <div class="f1-signup">
-            <img class="f1-signup-pfp" src="user-pfp.png">
+            <img class="f1-signup-pfp" src="https://github.com/mackerelcheese/AO3-Tutorials/blob/main/racing-results/user-pfp.png?raw=true">
           </div>
       </div>
       <!--Race Title-->
       <p class ="f1-racetitle">Dinoco 400 Piston Cup Racing Series - Race Result</p>
       <!--Race Sponsor Image-->
-      <img class = "f1-racesponsor" src = "dinocologo.png" alt="the Dinoco logo from the Cars movie">
+      <img class = "f1-racesponsor" src = "https://github.com/mackerelcheese/AO3-Tutorials/blob/main/racing-results/dinocologo.png?raw=true" alt="the Dinoco logo from the Cars movie">
       <!--Race Results Table-->
       <table class="f1-table">
         <tr>
@@ -64,7 +64,6 @@
           <td>12</td>
         </tr>
       </table>
-    </div>
   
       <p>I decided to make an HTML skin of the F1 race results based on the ones that that <a href="https://archiveofourown.org/users/Badhairred/pseuds/Badhairred">Badhairred</a> put at the end of the race chapters in <a href="https://archiveofourown.org/works/54682633/chapters/138581038">Godlight.</a> The above table is based on the results from Chapter 1 and other things that just made me laugh. </p>
   
@@ -73,7 +72,7 @@
       <p>If this is your first time using custom CSS in your AO3 works, I suggest reading this <a href="https://archiveofourown.org/admin_posts/1370">tutorial</a> on how to use custom workskins.</p>
       <p>Since this is the first in a series of HTML guides/proof of concepts I planned out, I'm going to be a bit rambly here.</p>
 
-      <h2>Pros and Cons </h2>
+      <h2>Pros and Cons:</h2>
       
       <p>Now before you decide to put this in your fic, here are some of the pros and cons of doing something like this to your fanfics: </p>
       
@@ -93,9 +92,10 @@
       
       <h3>About the code:</h3>
       <p>Again, this code was made to mimic the race results from Badhairred's fic so some of it might not be what you want (unless you are Badhairred, which in that case this MAY be something you want lol hi). Here are small tiny things about customizing this skin: </p>
-      <p>I added <code>f1-</code>in front of each class so you can use this without having it clash with other custom CSS you may be using (unless there's other CSS that also uses f1 whoops).</p>
-      <p>The output is scalable to different screen sizes since I used % instead of px. </p>
-     
+      <ul>
+        <li><p>I added <code>f1-</code>in front of each class so you can use this without having it clash with other custom CSS you may be using (unless there's other CSS that also uses f1 whoops).</p></li>
+        <li><p>The output is scalable to different screen sizes since I used % instead of px. </p></li>
+      </ul>
       <h2>Customizing the table columns and width: </h2>
       
       <h3>Columns</h3>
@@ -118,7 +118,7 @@
       
       <p>You might have noticed that for columns 1, 2, 3, and 5 there is some bold stuff going on and that the first and last column has some centre alignment. So AGAIN this was made to mimic something else that had that stuff going on. I didn’t want to have to put <code>&#60;strong&#62;Racer Name&#60;/strong&#62;</code> every time i wanted to add in a new racer. </p>
       
-      <p>If you want to customise that or remove it, here are the relevant bits in the CSS that you can do with what you please” </p>
+      <p>If you want to customise that or remove it, here are the relevant bits in the CSS that you can do with what you please.</p>
       
       <h4>Relevant CSS bits: </h4>
       <pre>
@@ -142,7 +142,7 @@ tr td:nth-child(5) {
       <p>I used the actual <a href="https://www.formula1.com/en/results/2024/races/1252/abu-dhabi/race-result">F1 mobile website</a> as a reference for this workskin. You should be fine copying the images I added to this CSS for the header section aka the menu button and the F1 logo.</p>
       <p>The Dinaco section is supposed to be the race sponsor (or what I assume is the race sponsor, I'm a fake fan) and was stylised to be like the <a href="https://www.formula1.com/en/results/2024/races/1232/japan/race-result">F1 mobile site</a> as per the image below:</p>
 
-      <img src="screenshot-f1.jpg" style="height: 20em;"> 
+      <img class = "tutorial-img" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/screenshot-f1.jpg"> 
 
       <details>
         <summary>The relavent line of HTML code are as follows:</summary>
@@ -279,64 +279,63 @@ tr td:nth-child(5) {
 
       <h2>The HTML</h2>
       <details>
-        <summary>The HTML code to copy paste to get the exact table as above </summary>
+        <summary>The HTML code to copy paste into your AO3 HTML work editor to get the exact table as above </summary>
         <pre>
-          &#60;div class="wrap"&#62; 
-            &#60;!--F1 Header--&#62; 
-            &#60;div class="f1-header"&#62; 
-              &#60;div class="f1-headermenu-R"&#62; 
-                &#60;img class="f1-headerimg" src="race3line.png" alt="the menu button"&#62; 
-              &#60;/div&#62; 
+          &#60;div class="wrap"&#62;
+          <strong>&#60;!--F1 Header--&#62;</strong>
+          &#60;div class="f1-header"&#62;
+              &#60;div class="f1-headermenu-R"&#62;
+                  &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/race3line.png" alt="the menu button"&#62;
+              &#60;/div&#62;
               &#60;div class="f1-headermenu-L"&#62;
-                &#60;img class="f1-headerimg" src="racelogo.png" alt="the F1 logo"&#62; 
+                  &#60;img class="f1-headerimg" src="https://raw.githubusercontent.com/mackerelcheese/AO3-Tutorials/refs/heads/main/racing-results/racelogo.png" alt="the F1 logo"&#62;
               &#60;/div&#62; 
-              &#60;div class="f1-signup"&#62; 
-                &#60;img class="f1-signup-pfp" src="user-pfp.png"&#62; 
-              &#60;/div&#62; 
-            &#60;/div&#62; 
-            &#60;!--Race Title--&#62; 
-            &#60;p class ="f1-racetitle"&#62;Dinoco 400 Piston Cup Racing Series - Race Result&#60;/p&#62; 
-            &#60;!--Race Sponsor Image--&#62; 
-            &#60;img class = "f1-racesponsor" src = "dinocologo.png" alt="the Dinoco logo from the Cars movie"&#62; 
-            &#60;!--Race Results Table--&#62; 
-            &#60;table class="f1-table"&#62;
-              &#60;tr&#62;
-                &#60;th style="width:5%"&#62;POS&#60;/th&#62; 
-                &#60;th style="width:36.5%"&#62;DRIVER&#60;/th&#62; 
-                &#60;th style="width:15%"&#62;NATIONALITY&#60;/th&#62; 
-                &#60;th style="width:36.5%"&#62;CAR&#60;/th&#62; 
-                &#60;th style="width:5%"&#62;PTS&#60;/th&#62;
-              &#60;/tr&#62; 
-              &#60;tr&#62; 
-                &#60;td&#62;1&#60;/td&#62; 
-                &#60;td&#62;Remus Lupin&#60;/td&#62; 
-                &#60;td&#62;NED&#60;/td&#62; 
-                &#60;td&#62;Black-Hill&#60;/td&#62; 
-                &#60;td&#62;25&#60;/td&#62; 
-              &#60;/tr&#62; 
-              &#60;tr&#62; 
-                &#60;td&#62;2&#60;/td&#62; 
-                &#60;td&#62;Sirius Black&#60;/td&#62; 
-                &#60;td&#62;FRA&#60;/td&#62; 
-                &#60;td&#62;Black-Hill&#60;/td&#62; 
-                &#60;td&#62;18&#60;/td&#62; 
-              &#60;/tr&#62; 
-              &#60;tr&#62; 
-                &#60;td&#62;3&#60;/td&#62; 
-                &#60;td&#62;James Potter&#60;/td&#62; 
-                &#60;td&#62;ESP&#60;/td&#62; 
-                &#60;td&#62;Andretti Racing&#60;/td&#62; 
-                &#60;td&#62;15&#60;/td&#62; 
-              &#60;/tr&#62; 
-              &#60;tr&#62; 
-                &#60;td&#62;4&#60;/td&#62; 
-                &#60;td&#62;Regulus Black&#60;/td&#62; 
-                &#60;td&#62;FRA&#60;/td&#62; 
-                &#60;td&#62;Andretti Racing&#60;/td&#62; 
-                &#60;td&#62;12&#60;/td&#62; 
-              &#60;/tr&#62;
-           &#60;/table&#62; 
+              &#60;div class="f1-signup"&#62;
+                &#60;img class="f1-signup-pfp" src="https://github.com/mackerelcheese/AO3-Tutorials/blob/main/racing-results/user-pfp.png?raw=true"&#62;
+              &#60;/div&#62;
           &#60;/div&#62;
+          <strong>&#60;!--Race Title--&#62;</strong>
+          &#60;p class ="f1-racetitle"&#62;Dinoco 400 Piston Cup Racing Series - Race Result&#60;/p&#62;
+          <strong>&#60;!--Race Sponsor Image--&#62;</strong>
+          &#60;img class = "f1-racesponsor" src = "https://github.com/mackerelcheese/AO3-Tutorials/blob/main/racing-results/dinocologo.png?raw=true" alt="the Dinoco logo from the Cars movie"&#62;
+          <strong>&#60;!--Race Results Table--&#62;</strong>
+          &#60;table class="f1-table"&#62;
+            &#60;tr&#62;
+              &#60;th style="width:5%"&#62;POS&#60;/th&#62;
+              &#60;th style="width:36.5%"&#62;DRIVER&#60;/th&#62;
+              &#60;th style="width:15%"&#62;NATIONALITY&#60;/th&#62;
+              &#60;th style="width:36.5%"&#62;CAR&#60;/th&#62;
+              &#60;th style="width:5%"&#62;PTS&#60;/th&#62;
+            &#60;/tr&#62;
+            &#60;tr&#62;
+              &#60;td&#62;1&#60;/td&#62;
+              &#60;td&#62;Remus Lupin&#60;/td&#62;
+              &#60;td&#62;NED&#60;/td&#62;
+              &#60;td&#62;Black-Hill&#60;/td&#62;
+              &#60;td&#62;25&#60;/td&#62;
+            &#60;/tr&#62;
+            &#60;tr&#62;
+              &#60;td&#62;2&#60;/td&#62;
+              &#60;td&#62;Sirius Black&#60;/td&#62;
+              &#60;td&#62;FRA&#60;/td&#62;
+              &#60;td&#62;Black-Hill&#60;/td&#62;
+              &#60;td&#62;18&#60;/td&#62;
+            &#60;/tr&#62;
+            &#60;tr&#62;
+              &#60;td&#62;3&#60;/td&#62;
+              &#60;td&#62;James Potter&#60;/td&#62;
+              &#60;td&#62;ESP&#60;/td&#62;
+              &#60;td&#62;Andretti Racing&#60;/td&#62;
+              &#60;td&#62;15&#60;/td&#62;
+            &#60;/tr&#62;
+            &#60;tr&#62;
+              &#60;td&#62;4&#60;/td&#62;
+              &#60;td&#62;Regulus Black&#60;/td&#62;
+              &#60;td&#62;FRA&#60;/td&#62;
+              &#60;td&#62;Andretti Racing&#60;/td&#62;
+              &#60;td&#62;12&#60;/td&#62;
+            &#60;/tr&#62;
+          &#60;/table&#62;
         </pre>
       </details>
      
@@ -367,8 +366,8 @@ tr td:nth-child(5) {
 
 <p>me learning HTML because fanfic 🤝 me learning F1 because fanfic</p>
 <p>there are two wolves inside of me</p>
-<p>if you're a marauders fan or just like funky HTML Tryhard fics, I have a marauders HTML Tryhard fic that's inspired by the movie Everything 
-  Everywhere All At Once and a prototype interative Choose Your Own Adventure Marauders Map fic.</p> 
+<p>if you're a marauders fan or just like funky HTML Tryhard fics, I have <a href class="https://archiveofourown.org/works/62203717/chapters/159122284">a marauders HTML Tryhard fic that's inspired by the movie Everything 
+  Everywhere All At Once</a> (its my passion project for real) and <a href ="https://archiveofourown.org/works/62239009">a prototype interative Choose Your Own Adventure Marauders Map fic.</a></p> 
 <p>Also please go check out the other works from the <a href="https://archiveofourown.org/collections/HTML_Tryhards_2025"> HTML Tryhard 2025 Fest!</a> Everyone worked really hard and its very fun.</p>
 
 <p>Come say hi on <a href="https://www.tumblr.com/mackerel-cheese">tumblr</a>!</p>
