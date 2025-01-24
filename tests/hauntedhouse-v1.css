@@ -77,6 +77,11 @@ figure:has(details.button[open])
     align-items: center;
 }
 
+.border-correct {
+    border-bottom:1px solid #646156 !important;
+
+}
+
 .windows-r2 {
     width:150px;
     height:61px;
