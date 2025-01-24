@@ -1,0 +1,265 @@
+figure {
+    margin-left:0px;
+    margin-right:0px;
+}
+
+figure:has(details.button[open])
+.house11 {
+    left:-75px;
+    transition-duration: 5s;
+}
+
+figure:has(details.button[open])
+.house13 {
+    left:225px;
+    transition-duration: 5s;
+}
+
+.viewpanel {
+    width:300px;
+    height:359px;
+    margin-left:auto;
+    margin-right:auto;
+    /*border:1px solid black;
+     overflow-y: hidden;
+    overflow-x: hidden;*/
+    display:flex;
+    position: relative;
+    align-items: center;
+}
+
+.house11 {
+    position:absolute;
+    width:150px;
+    height:359px;
+    overflow-y: hidden;
+    border:1px solid black;
+    left:0px;
+    transition-delay:0s;
+    transition-duration: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.house13 {
+    position:absolute;
+    width:150px;
+    height:359px;
+    overflow-y: hidden;
+    left:150px;
+    border:1px solid black;
+    transition-delay:0s;
+    transition-duration: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.house12 {
+    position:absolute;
+    width:150px;
+    height:359px;
+    overflow-y: hidden;
+    left:75px;
+    border:1px solid black;
+}
+
+.trim {
+    width:150px; 
+    height:15px;
+    background: #bdbcba;
+}
+
+.windows-r1 {
+    width:150px;
+    height:60px;
+    background: #646156;
+    border-bottom:1px solid black;
+    display:flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.windows-r2 {
+    width:150px;
+    height:61px;
+    background: #646156;
+    border-bottom:1px solid black;
+    display:flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.window-r3 {
+    width:150px;
+    height:25px;
+    background: #646156;
+    display:flex; 
+    justify-content: space-around;
+    align-items: end;
+    border-bottom: 1px solid white;;
+}
+
+.half {
+    width:50%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.door-r3 {
+    width:150px;
+    height:135px;
+    background: #bdbcba;
+    display:flex;
+    border-top:3px solid #bdbcba;
+}
+
+.window-trim {
+    width:40px;
+    height:5px;
+    background:white;
+}
+
+.window-s{
+    width:36px;
+    height:40px;
+    background:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-spanel {
+    width:32px;
+    height:34px;
+    background:#9d9d9d;
+}
+.window-m {
+    width:35px;
+    height:44px;
+    background:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-mpanel {
+    width:30px;
+    height:40px;
+    background:#9d9d9d;
+}
+
+.window-l {
+    width:35px;
+    height:54px;
+    background:white;
+    border:5px solid #2b2e25;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-lpanel {
+    width:32px;
+    height:48px;
+    background:#9d9d9d;
+}
+
+.semi-circle {
+    width: 45px;
+    height:20px;
+    border-radius: 25px 25px 0 0;
+    background:#646156;
+    border-right:5px solid #2b2e25; 
+    border-top:5px solid #2b2e25; 
+    border-left:5px solid #2b2e25; 
+}
+
+.bottom-l {
+    width:90px;
+    height:135px;
+}
+
+.bottom-r {
+    width:60px;
+    height:135px;
+    justify-content:center;
+}
+
+.door-sc {
+    width: 40px;
+    height:20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px 25px 0 0;
+    background: #0c0c05;
+    border-right:5px solid #8f8f8fed; 
+    border-top:5px solid #8f8f8fed; 
+    border-left:5px solid #8f8f8fed; 
+
+}
+
+.door {
+    width:40px;
+    height:69px;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #0c0c05;
+    border-right:5px solid #8f8f8fed; 
+    border-left:5px solid #8f8f8fed; 
+    border-top:5px solid #8f8f8fed; 
+    border-bottom:5px solid #2a1416; 
+}
+
+.stair {
+    width:60px;
+    height:6px; 
+    background:#3f3f41;
+    border-top:2px solid #5f5d5b;
+}
+
+.window-bcon {
+    width:90px;
+    height:75px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.window-b {
+    width:35px;
+    height:48px;
+    background: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.window-bpanel {
+    width:32px;
+    height:45px;
+    background:#9d9d9d;
+}
+
+.gate-top {
+    width:90px;
+    height:10px;
+    display:flex; 
+    border-bottom: 1px solid black; 
+}
+.gate-bcon {
+    width:90px;
+    height:50px;
+    display:flex;
+}
+
+.gate-bar {
+    width:6px; 
+    height:50px;
+    border-right:1px solid black;
+}
