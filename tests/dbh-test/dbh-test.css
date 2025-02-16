@@ -1,0 +1,173 @@
+.dbh-box {
+    display:block;
+    width:300px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    /*border:1px solid black;*/
+    font-size:1em;
+  }
+  
+  .dbh-optionrow {
+    display:flex; 
+    height:auto;
+    width:300px;
+    /*border:1px solid black;*/
+    justify-content:right;
+    margin-top:1.5px;
+    margin-bottom:1.5px;
+  }
+  
+  .dbh-textbox {
+    display:block;
+    min-width:18px;
+    padding:5px;
+    font-family: monospace, monospace;
+    color:white;
+    margin-right:2px;
+    font-size:0.9em; 
+    background-color:#808080;
+    list-style: none;
+    font-size:1em;
+    text-align:center;
+    justify-content:center;
+    align-content:center;
+  }
+  
+  .dbh-optionrow:hover .dbh-textbox {
+   background-color:#5A5A5A;
+  } 
+  
+  
+  .story-run{
+    display:none;
+  }
+  
+  .story-hide{
+    display:none;
+  }
+  
+  .story-left {
+    display:none;
+  }
+  
+  .story-right {
+    display:none;
+  }
+  
+  body:has(details.op-run[open])
+  .story-run{
+    display:block;
+  }
+  
+  body:has(details.op-run[open])
+  .op-hide{
+    display:none;
+  }
+  
+  body:has(details.op-hide[open])
+  .story-hide{
+    display:inline-block;
+  }
+  
+  body:has(details.op-hide[open])
+  .op-run{
+    display:none;
+  }
+  
+  body:has(details.op-left[open])
+  .story-left{
+    display:block;
+  }
+  
+  body:has(details.op-left[open])
+  .op-right{
+    display:none;
+  }
+  
+  body:has(details.op-right[open])
+  .story-right{
+    display:inline-block;
+  }
+  
+  body:has(details.op-right[open])
+  .op-left{
+    display:none;
+  }
+  
+  /*locked shennanigans*/
+  
+  .story-key {
+    display:none;
+  }
+  
+  .story-nextroom {
+    display:none
+  }
+  
+  .story-openbox {
+    display:none;
+  }
+  
+  .story-smashbox {
+    display:none;
+  }
+  
+  body:has(details.op-key[open])
+  .story-key{
+    display:block;
+  }
+  
+  body:has(details.op-key[open])
+  .op-openbox{
+    display:block;
+  }
+  
+  body:has(details.op-key[open])
+  .op-openboxLOCK{
+    display:none;
+  }
+  
+  
+  /*body:has(details.op-key[open])
+  .op-nextroom{
+    display:none;
+  }*/
+  
+  body:has(details.op-nextroom[open])
+  .story-nextroom{
+    display:block;
+  }
+  
+  .op-openbox{
+    display:none;
+  }
+  
+  .op-openboxLOCK{
+    display:block;
+  }
+  
+  body:has(details.op-smashbox[open])
+  .op-openboxLOCK{
+    display:none;
+  }
+  
+  body:has(details.op-smashbox[open])
+  .op-openbox{
+    display:none;
+  }
+  
+  body:has(details.op-smashbox[open])
+  .story-smashbox{
+    display:block;
+  }
+  
+  body:has(details.op-openbox[open])
+  .story-openbox{
+    display:block;
+  }
+  
+  body:has(details.op-openbox[open])
+  .op-smashbox{
+    display:none;
+  }
