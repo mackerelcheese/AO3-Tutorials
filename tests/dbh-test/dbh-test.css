@@ -1,3 +1,8 @@
+figure {
+    margin-left:0px;
+    margin-right: 0px;
+}
+
 .dbh-box {
     display:block;
     width:300px;
@@ -55,42 +60,42 @@
     display:none;
   }
   
-  body:has(details.op-run[open])
+  figure:has(details.op-run[open])
   .story-run{
     display:block;
   }
   
-  body:has(details.op-run[open])
+  figure:has(details.op-run[open])
   .op-hide{
     display:none;
   }
   
-  body:has(details.op-hide[open])
+  figure:has(details.op-hide[open])
   .story-hide{
     display:inline-block;
   }
   
-  body:has(details.op-hide[open])
+  figure:has(details.op-hide[open])
   .op-run{
     display:none;
   }
   
-  body:has(details.op-left[open])
+  figure:has(details.op-left[open])
   .story-left{
     display:block;
   }
   
-  body:has(details.op-left[open])
+  figure:has(details.op-left[open])
   .op-right{
     display:none;
   }
   
-  body:has(details.op-right[open])
+  figure:has(details.op-right[open])
   .story-right{
     display:inline-block;
   }
   
-  body:has(details.op-right[open])
+  figure:has(details.op-right[open])
   .op-left{
     display:none;
   }
@@ -113,28 +118,28 @@
     display:none;
   }
   
-  body:has(details.op-key[open])
+  figure:has(details.op-key[open])
   .story-key{
     display:block;
   }
   
-  body:has(details.op-key[open])
+  figure:has(details.op-key[open])
   .op-openbox{
     display:block;
   }
   
-  body:has(details.op-key[open])
+  figure:has(details.op-key[open])
   .op-openboxLOCK{
     display:none;
   }
   
   
-  /*body:has(details.op-key[open])
+  /*figure:has(details.op-key[open])
   .op-nextroom{
     display:none;
   }*/
   
-  body:has(details.op-nextroom[open])
+  figure:has(details.op-nextroom[open])
   .story-nextroom{
     display:block;
   }
@@ -147,27 +152,27 @@
     display:block;
   }
   
-  body:has(details.op-smashbox[open])
+  figure:has(details.op-smashbox[open])
   .op-openboxLOCK{
     display:none;
   }
   
-  body:has(details.op-smashbox[open])
+  figure:has(details.op-smashbox[open])
   .op-openbox{
     display:none;
   }
   
-  body:has(details.op-smashbox[open])
+  figure:has(details.op-smashbox[open])
   .story-smashbox{
     display:block;
   }
   
-  body:has(details.op-openbox[open])
+  figure:has(details.op-openbox[open])
   .story-openbox{
     display:block;
   }
   
-  body:has(details.op-openbox[open])
+  figure:has(details.op-openbox[open])
   .op-smashbox{
     display:none;
   }
