@@ -1,0 +1,19 @@
+figure {
+    margin-left: 0px;
+    margin-right:0px;
+}
+
+.obliviate > summary > span:nth-child(1) { 
+    font-weight: bold;
+    text-decoration: underline dotted green;
+    display:contents;
+    list-style: none;
+}
+
+.obliviate > summary {
+    list-style: none;
+}
+figure:has(details.obliviate[open])
+.upper {
+    opacity:0; 
+}
