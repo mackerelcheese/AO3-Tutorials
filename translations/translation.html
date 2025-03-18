@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translation test</title>
+    <link href="translation.css" rel="stylesheet">
+</head>
+<body>
+    <p>Summary</p>
+    <blockquote>
+        Do you want to have a nifty way to have multiple languages in a fic: 
+        <ul>
+            <li>Without making your readers scroll to the AN for a translation?</li>
+            <li>Without the text and translation sitting side by side?</li>
+            <li>And still make it look pretty when people download it into an EPUB or PDF format?</li>
+        </ul>
+        Here is a solution for you. Come on babygirls, let's roll.
+    </blockquote>
+    <p>(This is a HTML tutorial but I'm lowkey flirting with you by calling you babygirl occasionally because I got bored while writing this.)</p> 
+    
+    <p><strong>(Click/hover over the Chinese pinyin text in the scene below)
+        (you can disable this work's creator style to see how it looks like when downloaded,,, 
+        or download this work I guess)</strong></p>
+    <p>"Regulus," Sirius' hand tightens around Remus' upper arm. "I didn't think you were coming in today."</p>
+    <p class="translate">"<span class="l1">Wèishéme?</span><span class="hide"> (</span><span class="l2"><em>Why?</em></span><span class="hide">)</span>" his little brother taunts back. "<span class="l1">Bùxiǎng jiàn wǒ?</span><span class="hide"> (</span><span class="l2"><em>Don't want to see me?</em></span><span class="hide">)</span>"</p>
+    <p class="translate">Sirius clenches his jaw, "<span class="l1">Nǐ wèishéme zhème shuō?</span><span class="hide"> (</span><span class="l2">Why would you say that?</span><span class="hide">)</span>"</p>
+    
+    <hr>
+
+    <h2>Intro</h2>
+    <p>My internet friends and I had a whole discussion about writing multilingual fics and how best to have a
+        way to have multiple languages in a fic. This is my take on it! (i am working on this instead of my other wips whoops)
+    </p>
+    <p>
+        This code is heavily inspired by <a href="/users/La_Temperanza">La_Temperanza's</a> tutorial 
+        <a href="/works/10957056"> How To Change Text on AO3 When the Cursor is Hovering Over It 
+        (Or Clicked on Mobile)</a>.
+    </p>
+    <p>La_Temperanza's original code is super cool and you should check them out (also please check out their
+        other works, lowkey they have inspired me to learn how to code). 
+        There are a few things I wanted to add my own spin on compared to La_Temperanza's original code:</p>
+    <ul>
+        <li>Have all the text in the work body instead of using the CSS</li>
+        <li>Have it look pretty when downloaded as an EPUB without having to pull a <a href ="/users/jihnari/pseuds/html_hell">html_hell</a> 
+        and <a href="/works/60467425">hack it</a></li>
+    </ul>
+    <p>My initial idea was to do something similar to my <a href="/works/62239009">functional Marauders Map code</a>
+    (aka make fake buttons that can make sections dissapear and reappear) but it has a lot of ugly math for something that could have been 100000 times easier.</p>
+
+    <p>As per my previous tutorial's/proof of concepts, this isn't a tutorial on how to code on AO3, but if you're new to this realm, hello welcome to hell 
+        here are some handy resources to get you started:
+    </p>
+    <ul>
+        <li><a href="/admin_posts/1370">Step-By-Step Guide to Workskins</a></li>
+        <li><a href="https://www.w3schools.com/html/default.asp">Learn HTML on W3schools</a></li>
+        <li><a href="https://www.w3schools.com/cssref/sel_hover.php">W3school's :hover pseudo-class tutorial</a></li>
+        <li><a href="https://www.w3schools.com/cssref/pr_class_display.php">W3school's display property tutorial</a>
+            (we will be using the "inline" and "none" value)</li>
+    </ul>
+
+    <h2>The Code</h2>
+    <p>okay so this is just the code I used in the scene above:</p>
+    <details><summary>The CSS (aka the thing to throw into your Workskin)</summary></h3>
+    <pre>
+.l1 {
+  font-style:italic;
+}
+
+.l2 {
+  display:none;
+  font-style:italic;
+}
+
+.hide {
+  display:none;
+}
+
+.translate:hover .l1 {
+  display:none;
+}
+
+.translate:hover .l2 {
+  display:inline;
+} 
+    </pre>
+</details>
+    <p>Okay so now let's see it in action</p>
+
+    <details><summary>The HTML (aka the thing to throw into your work body)</summary>
+
+    <pre>
+&lt;p&gt;&quot;Regulus,&quot; Sirius&#39; hand tightens around Remus&#39; upper arm. &quot;I didn&#39;t think you were coming in today.&quot;&lt;/p&gt;
+&lt;p class=&quot;translate&quot;&gt;&quot;&lt;span class=&quot;l1&quot;&gt;Wèishéme?&lt;/span&gt;&lt;span class=&quot;hide&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;l2&quot;&gt;&lt;em&gt;Why?&lt;/em&gt;&lt;/span&gt;&lt;span class=&quot;hide&quot;&gt;)&lt;/span&gt;&quot; he asks, tossing his sunglasses to the side. &quot;&lt;span class=&quot;l1&quot;&gt;Bùxiǎng jiàn wǒ?&lt;/span&gt;&lt;span class=&quot;hide&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;l2&quot;&gt;&lt;em&gt;Don&#39;t want to see me?&lt;/em&gt;&lt;/span&gt;&lt;span class=&quot;hide&quot;&gt;)&lt;/span&gt;&quot;&lt;/p&gt;
+&lt;p class=&quot;translate&quot;&gt;Sirius clenches his jaw, &quot;&lt;span class=&quot;l1&quot;&gt;Nǐ wèishéme zhème shuō?&lt;/span&gt;&lt;span class=&quot;hide&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;l2&quot;&gt;Why would you say that?&lt;/span&gt;&lt;span class=&quot;hide&quot;&gt;)&lt;/span&gt;&quot;&lt;/p&gt;
+    </pre>
+</details>
+    <h2>Code Breakdown</h2>
+    <p>You might be thinking woah Mack that's a lot. yes, I'm aware
+        but I'll hold your hand the whole time okay babygirls? You're doing so well. 
+        I'm so proud of you. You got this, I believe in you.
+        (feel free to drop a comment on this work if you're stuck at any point)
+    </p>
+    <p>Let's take this part by part:</p>
+    <ul>
+        <li><span class="highlight-orange"><strong>translate:</strong></span> refers to the sentence that has the multilingual text</li>
+        <li><span class="highlight-blue"><strong>l1:</strong></span> refers to the language you want displayed in your original text.</li>
+        <li><span class="highlight-green"><strong>l2:</strong></span> refers to the language you want displayed when the reader hovers/clicks on the text</li>
+        <li><span class="highlight-pink"><strong>hide:</strong></span>refers to the sections that will only be visible when the fic has been downloaded
+        (another La_Temperanza trick)</li>
+    </ul>
+
+    <h3>Sentence Structure</h3>
+    <h4>Making the hovers work:</h4>
+    <p>First thing you need to note is the whole sentence. Instead of putting your sentence in 
+        regular <em>&lt;p&gt;&lt;/p&gt;</em> you have to use this <span class="highlight-orange"><em>&lt;p class=&quot;translate&quot;&gt;&lt;/p&gt;</em></span>.
+        This acts as the hoverable element.</p>
+    
+    <p>Next you have to add language sections, now it'll look like this:</p>
+
+    <pre><span class="highlight-orange">&lt;p class=&quot;translate&quot;&gt;</span><span class="highlight-blue">&lt;span class=&quot;l1&quot;&gt;</span>this is your language one<span class="highlight-blue">&lt;/span&gt;</span><span class="highlight-green">&lt;span class=&quot;l2&quot;&gt;</span>second language looks like this<span class="highlight-green">&lt;/span&gt;</span><span class="highlight-orange">&lt;/p&gt;</span></pre>
+    <p>It'll now look something like this with creator style on:</p>
+    <blockquote>
+        <p class="translate"><span class="l1">this is your language one</span><span class="l2">second language looks like this</span></p>
+    </blockquote>
+    <p>Cool, now your text is hoverable and changable, good job you.</p>
+
+    <h4>Making it look pretty when you download it/creator style off:</h4>
+    <p>With creator style off (aka when you download it), it will look like this:</p>
+    <blockquote>
+        <p>this is language onesecond language looks like this</p>
+    </blockquote>
+    <p>uhhhh okay less good.</p>
+    <p>Okayyy so let's fix that. But here comes the confusing part. 
+        Shhhh its okay, I gotchu. I'm going to hold your hand through this. 
+        We will get it together. 
+    </p>
+    <p>Here is the confusing part: the <span class="highlight-pink"><em>&#60;span class="hide"&#62;&#60;/span&#62;</em></span></p>
+    <p>The rationale behind this part is to hide the () that will  appear around your L2 once your work gets downloaded
+        as a PDF or EPUB.</p>
+    <p>I want the text to look like so once Creator Style is turned off or when the fic has been downloaded:</p>
+    <blockquote>
+        this is language one (<em>second language looks like this</em>).
+    </blockquote>
+    <p>So with that in mind, we have to do the scary bit now: *holds your hand*</p>
+        <ul>
+            <li>To hide the brackets, you have to use <span class="highlight-pink"><em>&#60;span class="hide"&#62;&#60;/span&#62;</em></span> to hide the brackets</li>
+            <li>To have the language two be in italics even with creator style/downloaded you have to wrap the affected text in <span class="highlight-yellow"><em>&#60;em&#62;&#60;/em&#62;</em></span></li>
+        </ul> 
+
+    <h4><strong>Super duper important things to note:</strong></h4>
+    <ul>
+        <li>So one thing I've learned while coding is that SPACES AND ORDER MATTER especially in <em>&#60;span&#62;&#60;/span&#62;s</em>. 
+            Trust me, I've cried over this so you know its legit. This means you have to be wary about
+        the spaces between your brackets, text, punctuation, quotation marks, etc.</li>
+        <li>You can put whatever text you want in the same paragraph, just make sure its outside of the affected <em>&#60;span&#62;&#60;/span&#62;s.</em></li>
+    </ul>
+    <h4>Okay so let's put it together:</h4>
+    <p>Code breakdown:</p>
+    <pre> 
+<span class="highlight-orange">&#60;p class="translate"&#62;</span>He sneezed before talking. "<span class="highlight-blue">&#60;span class="l1"&#62;</span>this is language one<span class="highlight-blue">&#60;/span&#62;</span><span class="highlight-pink">&#60;span class="hide"&#62;</span> (<span class="highlight-pink">&#60;/span&#62;</span><span class="highlight-green">&#60;span class="l2"&#62;</span><span class="highlight-yellow">&#60;em&#62;</span>second language looks like this<span class="highlight-pink">&#60;span class="hide"&#62;</span> )<span class="highlight-pink">&#60;/span&#62;</span><span class="highlight-yellow">&#60;/em&#62;</span><span class="highlight-green">&#60;/span&#62;</span>", said your character.<span class="highlight-orange">&#60;/p&#62;</span>
+    </pre>
+    <p>And this is how it will look like with Creator Style on:</p>
+    <blockquote>
+        <p class="translate">He sneezed before talking. "<span class="l1">this is language one</span><span class="hide"> (</span><span class="l2"><em>second language looks like this<span class="hide"> )</span></em></span>", said your character.</p>
+    </p>
+    </blockquote>
+
+    <p>Without Creator Style on or downloaded, it should look like this:</p>
+    <blockquote>
+        <p>He sneezed before talking. "this is language one (<em>second language looks like this</em>)", said your character.</p>
+    </blockquote>
+
+    <p>Congratulations, babygirl. You did it :) I'm so proud of you. Imagine how powerful you can be now.</p>
+
+    <h2>Outro</h2>
+    
+    <p>You could probably use this code for other things but my main goal was to make it work for 
+        multilingual fic purposes.
+    </p>
+
+    <h3>Pay Your Taxes</h3>
+    
+    <p>I think this code is easy enough that it's up to you if you want to credit me if you use this. Would be super duper cool if you link this tutorial in your AN's so more 
+        people can use this in their fics.</p> 
+    <p>That being said, you are emotionally obligated to drop a link
+        to your fic in the comments of this work or in my <a href="https://www.tumblr.com/blog/mackerel-cheese">tumblr ask box</a>
+        so i read your fics... (yes this is a convoluted way for me to get more multilingual fic recs...)
+    </p>
+
+    <h4>Notes for me:</h4>
+    <ul>
+        <li>retry this with details summary code so the readers can open all the text without affecting the other sections</li>
+        <li>figure out how to make the spans less complicated especially with the hidden bracket shennanigans.</li>
+        <li>go to sleep, why are you working on this now</li>
+    </ul>
+
+    <!--ending notes-->
+    <p>Thanks for reading this babygirl, I hope this was useful to you.</p>
+    <p>if you like HTML fics, you should check out my <a href="">functional moving Marauders Map Choose Your Own Adventure</a>, 
+    my <a href="">Marauders AU</a> inspired by the movie Everything Everywhere All At Once. or the <a href="">HTML Tryhard</a> tag on AO3</p>
+    <p>You can also check out my other tutorials in my <a href="">.shapes_and_colours</a> series.</p>
+    <p>If you're stuck on this code or want to ask questions, feel free to drop them in the comments or 
+        <a href=""></a> in my tumblr inbox.
+    </p>
+    <p>Sayonara amigos,<br>
+    Mack</p>
+</body>

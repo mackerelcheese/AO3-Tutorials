@@ -1,0 +1,116 @@
+figure {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.test-color {
+    color: yellowgreen;
+}
+
+figure:has(details.button-color[open])
+.test-color {
+    color:purple;
+}
+
+.test-appear1 {
+    display:none;
+}
+
+figure:has(details.button-ap1[open])
+.test-appear1 {
+    display:block;
+}
+
+/**static orders**/
+.container {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    min-height: 100px;
+    border:1px solid black;
+}
+
+.test-appear1ex1 {
+    display:none;
+}
+
+figure:has(details.button-ap1ex1[open])
+.test-appear1ex1 {
+    display:block;
+}
+
+.test-appear2ex1 {
+    display:none;
+}
+
+figure:has(details.button-ap2ex1[open])
+.test-appear2ex1 {
+    display:block;
+}
+
+/**custom orders**/
+
+.test-appear1-custom {
+    display:none;
+}
+
+.test-appear2-custom {
+    display:none;
+}
+
+figure:has(details.op1[open])
+.op1 {
+    display:none;
+}
+
+figure:has(details.op2[open])
+.op2 {
+    display:none;
+}
+
+figure:has(details.round1[open])
+.round1 {
+    display:none;
+}
+
+.round2 {
+    
+}
+
+figure:has(details.round1[open])
+.round2 {
+    display:block;
+}
+
+figure:has(details.round2[open])
+.round2 {
+    display:none;
+}
+
+
+figure:has(details.t1o1[open])
+.test-appear1-custom {
+    order:1;
+    display:block;
+}
+
+figure:has(details.t2o1[open])
+.test-appear2-custom {
+    order:1;
+    display:block;
+}
+
+figure:has(details.t1o2[open])
+.test-appear1-custom {
+    order:2;
+    display:block;
+}
+
+figure:has(details.t2o2[open])
+.test-appear2-custom {
+    order:2;
+    display:block;
+}
+
+
+

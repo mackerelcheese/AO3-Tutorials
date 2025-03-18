@@ -1,0 +1,45 @@
+.l1 {
+  font-style:italic;
+}
+
+.l2 {
+  display:none;
+  font-style:italic;
+}
+
+.hide {
+  display:none;
+}
+
+.translate:hover .l1 {
+  display:none;
+}
+
+.translate:hover .l2 {
+  display:inline;
+}
+
+.highlight-yellow {
+  background-color: yellow;
+}
+
+.highlight-pink {
+  background-color: pink;
+}
+
+.highlight-green {
+  background-color: #90EE90;
+}
+
+.highlight-blue {
+  background-color: #90D5FF;
+}
+
+.highlight-orange {
+  background-color:orange;
+}
+
+.highlight-red {
+  background-color: #FF7F7F;
+}
+

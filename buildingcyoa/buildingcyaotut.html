@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbh ao3 tests</title>
+    <link href="buildingcyaotut.css" rel="stylesheet">
+</head>
+
+<body>
+<figure>
+    <h1>Introduction</h1>
+    <p>Hello and welcome to hell.</p>
+    <p>This work is a document on how I made the functional Marauder’s Map skin and how you can make it too. I’m using this as a way to keep track of the different skills I learnt while making this and maybe other people can find it useful too. </p>
+    <p>This work is kind of long since I have also added some thoughts on how it can be customised to fit other needs and different workarounds for issues that came up.</p>
+    <p>This won’t be a tutorial on how to code. You do need some kind of basic knowledge before delving into this. I know it may be intimidating but its really fun once you have get the hang of it. I started learning how to code a few months ago for fanfic purposes. Here are some resources that I found extremely useful to get started:</p>
+    <ul>
+        <li></li>
+    </ul>
+    <p>I also encourage you to right click on the marauders map fic and use the inspect tool if you want to see how certain sections work.</p>
+    <p>Please note that if you follow this document, you will have to customise it based on your fic and what your story needs. It is not a template that is copy pastable.</p>
+
+    <h2>Goals for this workskin:</h2>
+    <p>Last year, I read this tumblr post and was inspired to make a functional choose your own adventure Marauders Map fic and i did which you can find here:</p>
+    <p>Key components I wanted to have in this skin are:</p>
+    <ol>
+        <li>Sections of the fic will only appear once the button has been clicked</li>
+        <li>Once the specific button is clicked, the reader cannot click it again </li>
+        <li>The sections will appear in the order the reader the readers clicked the buttons</li>
+        <li>Its all stylized to look like the Marauders Map</li>
+    </ol>
+
+    <h3>Overview on each section and how it was achieved:</h3>
+
+
+    <p>okay let's get started</p> 
+
+    <h1>Details and Summary Shennanigans (how to make a button)</h1>
+    <p>The details and summary tag can be used on AO3 as a way to hide certain sections of your fic.</p>
+    <p>At its basic without any styling, code that looks like this:</p>
+    <pre>
+&#60;details&#62;
+    &#60;summary&#62; Hello!&#60;/summary&#62; 
+        Peekaboo! 
+&#60;/details&#62; 
+    </pre>
+    
+    <p>It will be render like this:</p>
+    
+    <details>
+        <summary> Hello!</summary> 
+        Peekaboo! 
+    </details>        
+    <p>To make the buttons, I’ve taken advantage of using the open/closed states of the details summary to trigger certain actions. This is achieved using the :has pseudo-class.</p>    
+    <p>The logic behind this is pretty similar to using the IF function on spreadsheets:<strong>IF X is achieved, then Y happens.</strong></p>
+    <p><em>AKA</em></p>
+    <p><strong>IF [specific details summary] is [open], then [this class in the fic] will [change].</strong></p>
+
+    <p>The structure of that logic in regular HTML terms would look something like this:</p>
+    <p><strong>CSS:</strong></p>
+    <pre>
+
+.test-color {
+    color: yellowgreen;
+}
+
+figure:has(details.button-color[open])
+.test-color {
+    color:purple;
+}
+    </pre>
+    <p><strong>HTML:</strong></p>
+    <pre>
+&#60;details class="button-color"&#62;
+    &#60;summary&#62;Press Me&#60;/summary&#62;
+&#60;/details&#62;
+
+&#60;div class="test-color"&#62;So you want to be a millionaire?&#60;/div&#62;
+    </pre>
+    <p>It will render something like this:</p>
+    <details class="button-color">
+        <summary>Press Me</summary>
+    </details>
+
+    <div class="test-color">So you want to be a millionaire?</div>
+    <p>There is so much more you can do with this trick and its beautiful. We will talk more about styling etc in later sections of this work.</p>
+    <p>Would highly suggest you check out these other works that use this trick so that you can see its potential:</p>
+    <ul>
+        <li></li>
+    </ul>
+
+    <h1>Ugly mathing hours</h1>
+
+    <p>Okay so here is the hard part u.u</p> 
+    <p>So remember how I mentioned about those logic functions? Well here they are...</p>
+    <p>Let's break down what we want the maths to do:</p>
+    <ol>
+        <li>Have the text "appear" when the user clicks on the button</li>
+        <li>Have the text "appear" in order that the user clicked on it</li>
+        <li>Prevent readers from reclicking the same button more than once</li>
+    </ol>
+    <p>Here is an overview of the elements that help me achieve this section:</p>
+    <ol>
+        <li>the has: pseudo-class</li>
+        <li>the order property</li>
+        <li>the display property</li>
+    </ol>
+
+    <h2>Have the text "appear" when the user clicks on it</h2>
+    <p>confession time... this is all street magic slight of hand, all I do is lie on the internet.</p>
+    <p>Using the principles we covered in the previous chapter, we will make use of the <em>display:</em> property in CSS.</pre></p>
+    <p>We want to:</p>
+    <ol>
+        <li>Have no text</li>
+        <li>Reader clicks button</li>
+        <li>Text appears</li>
+    </ol>
+    <p>This is how I did it.</p>
+    <p><strong>CSS:</strong></p>
+    <pre>
+.test-appear1 {
+    display:none;
+}
+
+figure:has(details.button-ap1[open])
+.test-appear1 {
+    display:block;
+} 
+    </pre>
+    <p><strong>HTML:</strong></p>
+    <pre>
+
+    </pre>
+    <p>It will render like this:</p>
+    <details class="button-ap1">
+        <summary>Press Me</summary>
+    </details>
+    <br/>
+    <div class="test-appear1">Hello!</div>
+    <p>You can have multiple of these happening at the same time as well</p>
+
+    <h2>Have the text "appear" in the order the reader clicks on it</h2>
+    <p>okay this is the really tricky and i felt like crying the whole time i was trying to make this work.</p>
+    <p>There are a few principles you need to remember before approaching this:</p>
+    <ol>
+        <li><strong>Order matters</strong> when it comes to HTML.</li>
+    </ol>
+    <p>So if a code looks like this (yes the container matters, I'll explain in a bit):</p>
+    <p><strong>CSS:</strong></p>
+    <pre>
+.container {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    min-height: 100px;
+    border:1px solid black;
+}
+
+.test-appear2 {
+    display:none;
+}
+
+figure:has(details.button-ap2[open])
+.test-appear2 {
+    display:block;
+}
+
+.test-appear3 {
+    display:none;
+}
+
+figure:has(details.button-ap3[open])
+.test-appear3 {
+    display:block;
+}
+    </pre>
+    <p><strong>HTML:</strong></p>
+    <pre>
+
+    </pre>
+    <details class="button-ap1ex1">
+        <summary>Show text block 1</summary>
+    </details>
+    <details class="button-ap2ex1">
+        <summary>Show text block 2</summary>
+    </details>
+
+    <div class="container">
+        <div class="test-appear1ex1">
+            this is the first story
+        </div>
+        <div class="test-appear2ex1">
+            <hr>
+            this is the second story
+        </div>
+    </div>
+    <p>So as you can see, the order that I put the stories in matter. Now we can make incredible things with the order property</p>
+    <p>this is what happens when i add this to the css and html above.</p>
+
+    <p>first position choices panel</p>
+    <details class="t1o1">
+        <summary>show text block1</summary>
+    </details>
+    <details class="t2o1">
+        <summary>show text block2</summary>
+    </details>
+
+    <p>second position choices panel</p>
+    <details class="t1o2">
+        <summary>show text block1</summary>
+    </details>
+    <details class="t2o2">
+        <summary>show text block2</summary>
+    </details>
+
+    <div class="container">
+        <div class="test-appear1-custom">
+            <hr>
+            This is the first story
+        </div>
+        <div class="test-appear2-custom">
+            <hr>
+            This is the second story
+        </div>
+    </div>
+    <p>and thats how you get custom orders for cyoas in ao3 :P</p>
+    <p>but we're not done yet :/ here's a few more things you need to consider:</p>
+    <ul>
+        <li>only show one choice panel at a time</li>
+        <li>disable the choice once it has been selected in a previous section</li>
+    </ul>
+    <p>unfortunately, ao3 would require you to refresh your page if you want the choices to appear again, so here it is on my codepen so you can play with it easily</p>
+    <h2>Disabling the button once it has been clicked</h2>
+</figure>
+
+
+</body>
+</html>
